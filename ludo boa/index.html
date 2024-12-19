@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ludo Board</title>
+	<style>
+		.ludo-board {
+			width: 600px;
+			height: 600px;
+			border: 1px solid black;
+			display: grid;
+			grid-template-columns: repeat(15, 1fr);
+			grid-template-rows: repeat(15, 1fr);
+		}
+		
+		.ludo-board div {
+			border: 1px solid gray;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.ludo-board div:nth-child(odd) {
+			background-color: #f0f0f0;
+		}
+		
+		.ludo-board div:nth-child(even) {
+			background-color: #ffffff;
+		}
+		
+		.start {
+			background-color: green;
+			color: white;
+			font-weight: bold;
+		}
+		
+		.end {
+			background-color: red;
+			color: white;
+			font-weight: bold;
+		}
+		
+		.path {
+			background-color: blue;
+			color: white;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="ludo-board">
+		<!-- Starting point -->
+		<div class="start">Start</div>
+		
+		<!-- Path -->
+		<div class="path">1</div>
+		<div class="path">2</div>
+		<div class="path">3</div>
+		<!-- ... -->
+		
+		<!-- Ending point -->
+		<div class="end">End</div>
+		
+		<!-- Empty cells -->
+		<div></div>
+		<div></div>
+		<div></div>
+		<!-- ... -->
+	</div>
+</body>
+</html>
